@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace FirstProject
 {
@@ -10,6 +11,7 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("NUMERIC");
             /*
              * VARIABLES AND DATA TYPES
              * 
@@ -25,6 +27,8 @@ namespace FirstProject
              * const - declaring a variable as constant, unchangeable and read only
              * 
              * 
+             * 
+             * ** NUMERIC
              */
 
             int age = 35;
@@ -73,24 +77,58 @@ namespace FirstProject
              * Math.Round()
              * Math.Pow()
              * 
+             * 
+             * ** NUMERIC FORMATTING
              */
+            // Numeric formatting (Decimal)
+            Console.WriteLine();
+            Console.WriteLine("Numeric formatting (decimal)");
+
+            double result = 12000D / 17.54;
+            Console.WriteLine(string.Format("{0:0}", result));
+            Console.WriteLine(string.Format("{0:0.0}", result));
+            Console.WriteLine(string.Format("{0:0.#}", result));
+            Console.WriteLine(string.Format("{0:0.00}", result));
+
+            //Numeric formatting (Currency)
+            Console.WriteLine();
+            Console.WriteLine("Numeric formatting (currency)");
+
+            double money = 10D / 3D;
+            //Console.WriteLine(string.Format("{0:0.00}", result));
+            Console.WriteLine(money.ToString("C"));
+
+            // Using globalization
+            //      use the location of the server on which the program is running on (
+            //      not efficent if the program runs in different geographical locations.)
+            Console.WriteLine(money.ToString("C", CultureInfo.CurrentCulture));
+
+            //      use specific geographical locations.
+            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en.GB")));
+
+            //      research on using user location to format currency.
+
 
 
             /*
-             * STRING
-             * variable.Length
+             * ** STRING
+             *
+             *variable.Length
              * variable.ToUpper()
              * variable.ToLower()
              * variable.IndexOf(character)
              * variable.Substring(index) - returns a new string starting from a specified location
              * 
              * 
-             * 
              * Concatenation - + or string.Concat()
              * Interpolation - $""
+             *
              */
-            string name = "Worla"; // double quote is used
-            char letter = 'a'; // a single quote is used
+            Console.WriteLine();
+            Console.WriteLine("STRING");
+
+            string name = "Worla"; // double quote is used for string
+            char letter = 'a'; // a single quote is used for single characters
             Console.WriteLine($"The last letter in {name} is {letter}.");
 
             Console.WriteLine("Choose a Username.");
@@ -130,6 +168,9 @@ namespace FirstProject
              *      code block
              * }
              */
+            Console.WriteLine();
+            Console.WriteLine("CONDITIONALS AND IF STATEMENTS");
+
             int i = 0;
             while (i < 5)
             {
@@ -156,6 +197,9 @@ namespace FirstProject
              * 
              * 
             */
+            Console.WriteLine();
+            Console.WriteLine("LOOPS");
+
             string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
             foreach (string car in cars)
             {
@@ -167,10 +211,13 @@ namespace FirstProject
              * ARRAYS - store multiple values in a single variable
              * 
              */
+            Console.WriteLine();
+            Console.WriteLine("ARRAYS");
+
             string[] cars2 = { "Monday", "Wednesday", "Friday" };
             //cars2 = {"Monday", "Wednesday", "Friday"};
 
-            double videoPauseTime = 1.37;
+            double videoPauseTime = 1.49;
             Console.ReadKey();
         }
     }
