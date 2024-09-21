@@ -59,6 +59,39 @@ namespace FirstProject
             */
 
 
+
+
+            /*
+             * TryParse function - better alternative for converting string to integer
+             * 
+             */
+            Console.WriteLine();
+
+            int result2;
+            Console.WriteLine("Enter first number.");
+            string userInput1 = Console.ReadLine();
+            Console.WriteLine("Enter second number.");
+            string userInput2 = Console.ReadLine();
+
+            bool validFirstNumber = int.TryParse(userInput1, out int value);
+            bool validSecondNumber = int.TryParse(userInput2, out int value2);
+
+            if (validFirstNumber && validSecondNumber)
+            {
+                result2 = value + value2;
+                Console.WriteLine(result2);
+            }
+            else
+            {
+                if (!validFirstNumber || !validSecondNumber)
+                {
+                    Console.WriteLine("first or second number is invalid.");
+                }
+            }
+
+
+
+
             /*
              * OPERATORS
              * Arithmetic - +, -, *, /, %, ++, -- 
@@ -67,6 +100,9 @@ namespace FirstProject
              * Logical - &&, ||, ! 
              *
              */
+
+
+
 
             /*
              * MATHS CLASS METHODS
@@ -104,9 +140,10 @@ namespace FirstProject
             Console.WriteLine(money.ToString("C", CultureInfo.CurrentCulture));
 
             //      use specific geographical locations.
-            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en.GB")));
+            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en-GB")));
 
             //      research on using user location to format currency.
+
 
 
 
@@ -217,7 +254,7 @@ namespace FirstProject
             string[] cars2 = { "Monday", "Wednesday", "Friday" };
             //cars2 = {"Monday", "Wednesday", "Friday"};
 
-            double videoPauseTime = 1.49;
+            double videoPauseTime = 2.03;
             Console.ReadKey();
         }
     }
