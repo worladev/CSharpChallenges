@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.Threading;
 
 namespace FirstProject
 {
@@ -150,16 +151,27 @@ namespace FirstProject
             /*
              * ** STRING
              *
-             *variable.Length
+             * variable.Length
              * variable.ToUpper()
              * variable.ToLower()
              * variable.IndexOf(character)
              * variable.Substring(index) - returns a new string starting from a specified location
+             * string.Empty
+             * string.IsNullOrEmpty(variable)
+             * variable.Equals(otherVariable) // compares references in memory
+             * variable.Contains(character)
              * 
              * 
-             * Concatenation - + or string.Concat()
+             * 
+             * Concatenation - + or string.Concat(comma separated values)
              * Interpolation - $""
-             *
+             * Using back slash for quotation within a string
+             *  e.g., "Michael said "Come here"" ==> "Michael said \"Come here\""
+             *      or C:\Users\CodeWorl\Desktop\c#_tuts ==> C:\\Users\\CodeWorl\\Desktop\\c#_tuts
+             *      or Verbatim: @"C:\Users\CodeWorl\Desktop\c#_tuts"
+             *                   @"Michael said "Come here""
+             * 
+             * 
              */
             Console.WriteLine();
             Console.WriteLine("STRING");
@@ -171,6 +183,20 @@ namespace FirstProject
             Console.WriteLine("Choose a Username.");
             string userName = Console.ReadLine();
             Console.WriteLine($"Welcome {userName}");
+
+            //String iteration
+
+            string message = "C# is Awesome";
+            
+            for (int i = 0; i < message.Length; i++)
+            {
+                Console.Write(message[i]);
+                Thread.Sleep(500);
+            }
+
+
+
+
 
 
             /*
@@ -208,11 +234,11 @@ namespace FirstProject
             Console.WriteLine();
             Console.WriteLine("CONDITIONALS AND IF STATEMENTS");
 
-            int i = 0;
-            while (i < 5)
+            int loopCounter = 0;
+            while (loopCounter < 5)
             {
                 Console.WriteLine("I am a while loop.");
-                i++;
+                loopCounter++;
             }
 
 
@@ -254,7 +280,7 @@ namespace FirstProject
             string[] cars2 = { "Monday", "Wednesday", "Friday" };
             //cars2 = {"Monday", "Wednesday", "Friday"};
 
-            double videoPauseTime = 2.03;
+            double videoPauseTime = 3.07;
             Console.ReadKey();
         }
     }
