@@ -119,6 +119,43 @@ namespace CSharpChallenges
 
 
 
+            /*
+             * TASK     TASK    TASK
+             * 
+             * RIGHT ANGLE TRIANGLE VALIDATOR
+             * A program to accept 3 angles from the user, store them in an array.
+             * Sum them up and check if the sum is a valid right angle triangle or not
+             * 
+             * HINT: use a for loop to accept and store the angle and a foreach loop
+             * to sum them up.
+             */
+            int angleCount = 3;
+            //int[] angles = new int[angleCount];
+            int angleSum = 0;
+
+            for (int i = 0; i < angleCount; i++)
+            {
+                Console.WriteLine($"Enter angle {i - 1}");
+                int angleInput = Convert.ToInt32(Console.ReadLine());
+                //angles.Append(angleInput);
+
+                // add new angle value to angleSum value
+                angleSum += angleInput;
+            }
+
+            // check if the total sum of angleSum is equal to 180 to confirm the
+            // angles form a right angle triangle. 
+            if (angleSum == 180)
+            {
+                Console.WriteLine("Angles form a right angle triangle.");
+            }
+            else
+            {
+                Console.WriteLine("Angles do not form a right angle triangle.");
+            }
+
+
+
             Console.ReadKey();
         }
     }
