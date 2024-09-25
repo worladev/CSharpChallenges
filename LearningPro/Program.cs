@@ -273,6 +273,12 @@ namespace FirstProject
             /*
              * ARRAYS - store multiple values in a single variable
              * 
+             * LOOPING
+             * for each(dataType variableName in arrayName){}
+             * 
+             * METHODS
+             * 
+             * 
              */
             Console.WriteLine();
             Console.WriteLine("ARRAYS");
