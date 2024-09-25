@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSharpChallenges
@@ -12,7 +13,9 @@ namespace CSharpChallenges
         {
             Console.WriteLine("This is the Main Challenges Solution Project.");
 
-            /* TASK
+            /* TASK    TASK    TASK
+             * 
+             * TIMES TABLE
              * Ask the user for a number x. Write a program to print x times table up to the 12th value.
              */
 
@@ -46,9 +49,46 @@ namespace CSharpChallenges
 
 
             /*
-             * TASK
+             * TASK     TASK    TASK
              * 
+             * THE FIZZ BUZZ GAME
              */
+            // FizzBuzz Game
+            Console.WriteLine("WELCOME TO THE FIZZBUZZ GAME");
+
+            // string userInput = Console.ReadLine();
+            // int.TryParse(userInput, out int limit);
+
+            int limit = 15;
+            bool threeDiv;
+            bool fiveDiv;
+
+            for (int i = 1; i <= limit; i++)
+            {
+                threeDiv = i % 3 == 0;
+                fiveDiv = i % 5 == 0;
+
+                if (threeDiv && fiveDiv)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (threeDiv)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (fiveDiv)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+
+
+
             Console.ReadKey();
         }
     }
