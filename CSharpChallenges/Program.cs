@@ -59,6 +59,7 @@ namespace CSharpChallenges
             // string userInput = Console.ReadLine();
             // int.TryParse(userInput, out int limit);
 
+            // variable declaration
             int limit = 15;
             bool threeDiv;
             bool fiveDiv;
@@ -86,6 +87,35 @@ namespace CSharpChallenges
                 }
             }
 
+
+
+            /*
+             * TASK     TASK    TASK
+             * 
+             * REVERSE A STRING
+             * A program to accept a string from the user. Use a loop to print the string, and
+             * print it's reverse.
+             *
+             */
+            Console.WriteLine("Enter any string.");
+
+            //accept string form user
+            string message = Console.ReadLine();
+
+            //use a for loop to display the string
+            for (int i = 0; i <= message.Length; i++)
+            {
+                Console.Write(message[i]);
+            }
+
+            Console.WriteLine();
+
+            //use a for loop to print the string in reverse
+            for (int i = message.Length - 1; i >= 0; i--)
+            {
+                Console.Write(message[i]);
+                Thread.Sleep(500);
+            }
 
 
 
