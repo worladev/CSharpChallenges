@@ -129,6 +129,8 @@ namespace CSharpChallenges
              * HINT: use a for loop to accept and store the angle and a foreach loop
              * to sum them up.
              */
+
+            // Solution 1 - regular
             int angleCount = 3;
             //int[] angles = new int[angleCount];
             int angleSum = 0;
@@ -153,6 +155,66 @@ namespace CSharpChallenges
             {
                 Console.WriteLine("Angles do not form a right angle triangle.");
             }
+
+            //// Solution 2 - using array ////
+            int angleCount2 = 3;
+            int[] angles2 = new int[angleCount2];
+            int angleSum2 = 0;
+
+            // a for loop to accept and save angles inside an array
+            for (int i = 0; i < angleCount2; i++)
+            {
+                Console.WriteLine($"Enter angle {i + 1}");
+                int angleInput2 = Convert.ToInt32(Console.ReadLine());
+
+                // store angles in an array
+                angles2[i] = angleInput2;
+
+                // add new angle value to angleSum value
+                //angleSum += angles[i];
+            }
+
+            // a foreach loop to sum the angles stored in the array
+            foreach (int angle2 in angles2)
+            {
+                angleSum2 += angle2;
+            }
+
+            // check if the total sum of angleSum is equal to 180 to confirm the
+            // angles form a right angle triangle. 
+            if (angleSum2 == 180)
+            {
+                Console.WriteLine("Angles form a right angle triangle.");
+            }
+            else
+            {
+                Console.WriteLine("Angles do not form a right angle triangle.");
+            }
+
+
+
+            /*
+             * TASK     TASK    TASK
+             * 
+             * PASSWORD VALIDATOR
+             * Write a program that asks the user to enter a password.
+             * If the user enters the right password,the program should
+             * tell them they are logged in to the system.
+             * Otherwise, the program should ask them to re-enter the password.
+             * The user should only get five tries to enter the password, after which point
+             * the program should tell them that they are kicked off of the system.
+             * 
+             * HINTS
+             * Take the user's input dynamically by asking them to enter it.
+             * You can write two functions: one that handles the password checking and one that checks
+             * if the password is correct and displays the message accordingly.
+             * 
+             * RULES FOR THE PASSWORD
+             * The password must be at least 6 characters long.
+             * The password must contain at least one uppercase letter (A–Z).
+             * The password must contain at least one lowercase letter (a–z).
+             * The password must contain at least one digit (0–9).
+             */
 
 
 
