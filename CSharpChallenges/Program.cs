@@ -131,16 +131,14 @@ namespace CSharpChallenges
              */
 
             // Solution 1 - regular
-            int angleCount = 3;
-            //int[] angles = new int[angleCount];
+            const int angleCount = 3;
             int angleSum = 0;
 
             for (int i = 0; i < angleCount; i++)
             {
                 Console.WriteLine($"Enter angle {i - 1}");
                 int angleInput = Convert.ToInt32(Console.ReadLine());
-                //angles.Append(angleInput);
-
+                
                 // add new angle value to angleSum value
                 angleSum += angleInput;
             }
@@ -157,12 +155,11 @@ namespace CSharpChallenges
             }
 
             //// Solution 2 - using array ////
-            int angleCount2 = 3;
-            int[] angles2 = new int[angleCount2];
+            int[] angles2 = new int[angleCount];
             int angleSum2 = 0;
 
             // a for loop to accept and save angles inside an array
-            for (int i = 0; i < angleCount2; i++)
+            for (int i = 0; i < angleCount; i++)
             {
                 Console.WriteLine($"Enter angle {i + 1}");
                 int angleInput2 = Convert.ToInt32(Console.ReadLine());
