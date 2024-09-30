@@ -277,6 +277,22 @@ namespace FirstProject
              * for each(dataType variableName in arrayName){}
              * 
              * METHODS
+             * Array.sort(arrayName)
+             * Array.Reverse(arrayName)
+             * int variableName = Array.IndexOf(arrayName, value)
+             * int variableName = Array.LastIndexOf(arrayName, value)
+             * Array.Copy(sourceArray, destinationArray, length)
+             * Array.Clear(arrayName, startIndex, length)
+             * Array.Resize(ref arrayName, newSize)
+             * Array.Find(arrayName, condition)
+             * Array.FindAll(arrayName, condition)
+             * Array.ForEach(arrayName, action)
+             * Array.Exists(arrayName, condition)
+             * bool match = Array.TrueForAll(arrayName, condition)
+             * 
+             * PROPERTIES
+             * arrayName.Length()
+             * arrayName.Rank()
              * 
              * 
              */
