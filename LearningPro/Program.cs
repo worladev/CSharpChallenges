@@ -302,8 +302,36 @@ namespace FirstProject
             Console.WriteLine();
             Console.WriteLine("ARRAYS");
 
+            //Array.Sort() usage
+            int[] num = new int[] { 4, 2, 7, 1, 3 };
+            Array.Sort(num);
+            foreach (int i in num)
+            {
+                Console.WriteLine(i);
+            }
+
+            //sort usage 2
+            Console.WriteLine();
+            string[] letters = new string[] { "a", "i", "f", "y" };
+            Array.Sort(letters);
+            foreach (string letter2 in letters)
+            {
+                Console.Write($"{letter2}, ");
+            }
+
+            //Array.Reverse() usage
+            Console.WriteLine();
+            string[] words = new string[] { "one", "two", "four", "five" };
+            Array.Reverse(words);
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
+            }
+
+
             string[] cars2 = { "Monday", "Wednesday", "Friday" };
             //cars2 = {"Monday", "Wednesday", "Friday"};
+
 
             double videoPauseTime = 3.37;
             Console.ReadKey();
