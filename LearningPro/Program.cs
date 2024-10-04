@@ -279,8 +279,10 @@ namespace FirstProject
              * METHODS
              * Array.sort(arrayName)
              * Array.Reverse(arrayName)
-             * int variableName = Array.IndexOf(arrayName, value)
-             * int variableName = Array.LastIndexOf(arrayName, value)
+             * Array.IndexOf(arrayName, value)
+             *      Usage: int variableName = Array.IndexOf(arrayName, value)
+             * Array.LastIndexOf(arrayName, value)
+             *      Usage: int variableName = Array.LastIndexOf(arrayName, value)
              * Array.Copy(sourceArray, destinationArray, length)
              * Array.Clear(arrayName, startIndex, length)
              * Array.Resize(ref arrayName, newSize)
@@ -288,7 +290,8 @@ namespace FirstProject
              * Array.FindAll(arrayName, condition)
              * Array.ForEach(arrayName, action)
              * Array.Exists(arrayName, condition)
-             * bool match = Array.TrueForAll(arrayName, condition)
+             * Array.TrueForAll(arrayName, condition)
+             *      Usage: bool match = Array.TrueForAll(arrayName, condition)
              * 
              * PROPERTIES
              * arrayName.Length()
@@ -302,7 +305,7 @@ namespace FirstProject
             string[] cars2 = { "Monday", "Wednesday", "Friday" };
             //cars2 = {"Monday", "Wednesday", "Friday"};
 
-            double videoPauseTime = 3.07;
+            double videoPauseTime = 3.37;
             Console.ReadKey();
         }
     }
