@@ -77,15 +77,12 @@ namespace FirstProject
             bool validFirstNumber = int.TryParse(userInput1, out int value);
             bool validSecondNumber = int.TryParse(userInput2, out int value2);
 
-            if (validFirstNumber && validSecondNumber)
-            {
+            if (validFirstNumber && validSecondNumber) {
                 result2 = value + value2;
                 Console.WriteLine(result2);
             }
-            else
-            {
-                if (!validFirstNumber || !validSecondNumber)
-                {
+            else {
+                if (!validFirstNumber || !validSecondNumber) {
                     Console.WriteLine("first or second number is invalid.");
                 }
             }
@@ -188,8 +185,7 @@ namespace FirstProject
 
             string message = "C# is Awesome";
             
-            for (int i = 0; i < message.Length; i++)
-            {
+            for (int i = 0; i < message.Length; i++) {
                 Console.Write(message[i]);
                 Thread.Sleep(500);
             }
@@ -264,8 +260,7 @@ namespace FirstProject
             Console.WriteLine("LOOPS");
 
             string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
-            foreach (string car in cars)
-            {
+            foreach (string car in cars) {
                 Console.WriteLine(car);
             }
 
@@ -278,18 +273,31 @@ namespace FirstProject
              * 
              * METHODS
              * Array.sort(arrayName)
+             * 
              * Array.Reverse(arrayName)
+             * 
              * Array.IndexOf(arrayName, value)
+             *      - returns the position of an element in an array
              *      Usage: int variableName = Array.IndexOf(arrayName, value)
+             * 
              * Array.LastIndexOf(arrayName, value)
              *      Usage: int variableName = Array.LastIndexOf(arrayName, value)
+             * 
              * Array.Copy(sourceArray, destinationArray, length)
+             * 
              * Array.Clear(arrayName, startIndex, length)
+             *      - reset array values back to their default values.
+             * 
              * Array.Resize(ref arrayName, newSize)
+             * 
              * Array.Find(arrayName, condition)
+             * 
              * Array.FindAll(arrayName, condition)
+             * 
              * Array.ForEach(arrayName, action)
+             * 
              * Array.Exists(arrayName, condition)
+             * 
              * Array.TrueForAll(arrayName, condition)
              *      Usage: bool match = Array.TrueForAll(arrayName, condition)
              * 
@@ -305,8 +313,7 @@ namespace FirstProject
             //Array.Sort() usage
             int[] num = new int[] { 4, 2, 7, 1, 3 };
             Array.Sort(num);
-            foreach (int i in num)
-            {
+            foreach (int i in num) {
                 Console.WriteLine(i);
             }
 
@@ -314,8 +321,7 @@ namespace FirstProject
             Console.WriteLine();
             string[] letters = new string[] { "a", "i", "f", "y" };
             Array.Sort(letters);
-            foreach (string letter2 in letters)
-            {
+            foreach (string letter2 in letters) {
                 Console.Write($"{letter2}, ");
             }
 
@@ -323,10 +329,11 @@ namespace FirstProject
             Console.WriteLine();
             string[] words = new string[] { "one", "two", "four", "five" };
             Array.Reverse(words);
-            foreach (string word in words)
-            {
+            foreach (string word in words) {
                 Console.WriteLine(word);
             }
+
+            //indexOf usage
 
 
             string[] cars2 = { "Monday", "Wednesday", "Friday" };
