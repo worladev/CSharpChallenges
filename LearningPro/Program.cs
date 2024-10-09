@@ -266,7 +266,8 @@ namespace FirstProject
 
 
             /*
-             * ARRAYS - store multiple values in a single variable
+             * ARRAYS - immutable
+             * store multiple values in a single variable
              * 
              * LOOPING
              * for each(dataType variableName in arrayName){}
@@ -276,7 +277,7 @@ namespace FirstProject
              * 
              * Array.Reverse(arrayName)
              * 
-             * Array.IndexOf(arrayName, value)
+             * Array.IndexOf(arrayName, value, startIndex)
              *      - returns the position of an element in an array
              *      Usage: int variableName = Array.IndexOf(arrayName, value)
              * 
@@ -310,6 +311,9 @@ namespace FirstProject
             Console.WriteLine();
             Console.WriteLine("ARRAYS");
 
+            //Declaration
+            //  dataType[] arrayName = new dataType[arraySize];
+            
             //Array.Sort() usage
             int[] num = new int[] { 4, 2, 7, 1, 3 };
             Array.Sort(num);
@@ -334,13 +338,40 @@ namespace FirstProject
             }
 
             //indexOf usage
+            int[] numbers = new int[] { 5, 10, 15, 20, 25 };
+            int searchInput = Convert.ToInt32(Console.ReadLine());
+
+            int position = Array.IndexOf(numbers, searchInput);
+
+            if (position > -1)
+            {
+                Console.WriteLine($"Number {searchInput} has been found at positon {position}");
+            }
+            else
+            {
+                Console.WriteLine("Number not found.");
+            }
 
 
-            string[] cars2 = { "Monday", "Wednesday", "Friday" };
+
+            //string[] cars2 = { "Monday", "Wednesday", "Friday" };
             //cars2 = {"Monday", "Wednesday", "Friday"};
 
 
-            double videoPauseTime = 3.37;
+
+            /*
+             * LISTS - mutable
+             * 
+             * METHODS
+             * .add() - 
+             * 
+             */
+            Console.WriteLine("LIST");
+
+            //Declaration
+            //  List<dataType> listName = new List<dataType>();
+
+            double videoPauseTime = 3.55;
             Console.ReadKey();
         }
     }
