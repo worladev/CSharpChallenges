@@ -12,25 +12,9 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
+            // SAMPLE DATA TYPES AND VARIABLE USAGE
+            // NUMERIC
             Console.WriteLine("NUMERIC");
-            /*
-             * VARIABLES AND DATA TYPES
-             * 
-             * int - [4 bytes] stores integers (whole numbers), without decimals, from -2,147,483,648 to 2,147,483,647
-             * long - [8 bytes] stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
-             * float - [4 bytes] stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
-             * double - [8 bytes] stores fractional numbers. Sufficient for storing 15 decimal digits
-             ** decimal - 
-             * char - [2 bytes] stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
-             * string - [2 bytes] stores text, such as "Hello World". String values are surrounded by double quotes
-             * bool - [1 bit ] stores values with two states: true or false
-             * 
-             * const - declaring a variable as constant, unchangeable and read only
-             * 
-             * 
-             * 
-             * ** NUMERIC
-             */
 
             int age = 35;
             Console.WriteLine(age);
@@ -50,27 +34,19 @@ namespace FirstProject
             Console.WriteLine(bigNumber5);
 
             /*
-             * TYPE CONVERSION -> in-built methods
-             * Convert.ToInt32()
-             * Convert.ToInt64()
-             * Convert.ToFloat()
-             * Convert.ToDouble()
-             * Convert.ToString()
-             * 
-            */
-
-
-
-
-            /*
+             * TYPE CONVERSION USAGE
+             *
+             *
              * TryParse function - better alternative for converting string to integer
              * 
              */
             Console.WriteLine();
 
             int result2;
+
             Console.WriteLine("Enter first number.");
             string userInput1 = Console.ReadLine();
+            
             Console.WriteLine("Enter second number.");
             string userInput2 = Console.ReadLine();
 
@@ -88,29 +64,14 @@ namespace FirstProject
             }
 
 
-
-
             /*
              * OPERATORS
-             * Arithmetic - +, -, *, /, %, ++, -- 
-             * Assignment - =, +=, -=, *=, /=, %=, &=, |=, ^=, >>=, <<=
-             * Comparison - ==, !=, >, <, >=, <=
-             * Logical - &&, ||, ! 
-             *
+             * 
              */
 
 
-
-
             /*
-             * MATHS CLASS METHODS
-             * Math.Max()
-             * Math.Min()
-             * Math.Sqrt()
-             * Math.Abs()
-             * Math.Round()
-             * Math.Pow()
-             * 
+             * MATHS CLASS METHODS 
              * 
              * ** NUMERIC FORMATTING
              */
@@ -144,32 +105,11 @@ namespace FirstProject
 
 
 
-
             /*
-             * ** STRING
-             *
-             * variable.Length
-             * variable.ToUpper()
-             * variable.ToLower()
-             * variable.IndexOf(character)
-             * variable.Substring(index) - returns a new string starting from a specified location
-             * string.Empty
-             * string.IsNullOrEmpty(variable)
-             * variable.Equals(otherVariable) // compares references in memory
-             * variable.Contains(character)
-             * 
-             * 
-             * 
-             * Concatenation - + or string.Concat(comma separated values)
-             * Interpolation - $""
-             * Using back slash for quotation within a string
-             *  e.g., "Michael said "Come here"" ==> "Michael said \"Come here\""
-             *      or C:\Users\CodeWorl\Desktop\c#_tuts ==> C:\\Users\\CodeWorl\\Desktop\\c#_tuts
-             *      or Verbatim: @"C:\Users\CodeWorl\Desktop\c#_tuts"
-             *                   @"Michael said "Come here""
-             * 
+             * STRING
              * 
              */
+           
             Console.WriteLine();
             Console.WriteLine("STRING");
 
@@ -189,10 +129,6 @@ namespace FirstProject
                 Console.Write(message[i]);
                 Thread.Sleep(500);
             }
-
-
-
-
 
 
             /*
@@ -265,49 +201,8 @@ namespace FirstProject
             }
 
 
-            /*
-             * ARRAYS - immutable
-             * store multiple values in a single variable
-             * 
-             * LOOPING
-             * for each(dataType variableName in arrayName){}
-             * 
-             * METHODS
-             * Array.sort(arrayName)
-             * 
-             * Array.Reverse(arrayName)
-             * 
-             * Array.IndexOf(arrayName, value, startIndex)
-             *      - returns the position of an element in an array
-             *      Usage: int variableName = Array.IndexOf(arrayName, value)
-             * 
-             * Array.LastIndexOf(arrayName, value)
-             *      Usage: int variableName = Array.LastIndexOf(arrayName, value)
-             * 
-             * Array.Copy(sourceArray, destinationArray, length)
-             * 
-             * Array.Clear(arrayName, startIndex, length)
-             *      - reset array values back to their default values.
-             * 
-             * Array.Resize(ref arrayName, newSize)
-             * 
-             * Array.Find(arrayName, condition)
-             * 
-             * Array.FindAll(arrayName, condition)
-             * 
-             * Array.ForEach(arrayName, action)
-             * 
-             * Array.Exists(arrayName, condition)
-             * 
-             * Array.TrueForAll(arrayName, condition)
-             *      Usage: bool match = Array.TrueForAll(arrayName, condition)
-             * 
-             * PROPERTIES
-             * arrayName.Length()
-             * arrayName.Rank()
-             * 
-             * 
-             */
+            //ARRAYS - immutable
+
             Console.WriteLine();
             Console.WriteLine("ARRAYS");
 
@@ -360,16 +255,33 @@ namespace FirstProject
 
 
             /*
-             * LISTS - mutable
-             * 
-             * METHODS
-             * .add() - 
+             * LISTS - mutable and dynamic
              * 
              */
             Console.WriteLine("LIST");
 
             //Declaration
             //  List<dataType> listName = new List<dataType>();
+            //  sample how to
+            List<string> names = new List<string>();
+            List<int> ages = new List<int>();
+            int counter = 3;
+
+            for (int i = 0; i < counter; i++)
+            {
+                Console.WriteLine("Enter first name: ");
+                names.Add(Console.ReadLine());
+
+                Console.WriteLine("Enter age: ");
+                ages.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+
+            for (int i = 0; i < counter; i++)
+            {
+                Console.WriteLine($"{names[i]} is {ages[i]} years old.");
+            }
+
+
 
             double videoPauseTime = 3.55;
             Console.ReadKey();
