@@ -204,11 +204,65 @@
    *	List<dataType> listName = new List<dataType>();
    *
    * METHODS
-   * .Add() - 
+   * 
+   * use square brackets with indexPosition to access element(s)
+   * 
+   * .Add() -
+   *
    * .Remove() - 
+   *
    * .Count - 
    * 
+   * .AddRange()
+   *	- adds multiple elements
+   *	-usage variableName.AddRange(new int[] {1, 2, 3, 4});
+   * 
+   * .Insert(indexPosition, value)
+   *	-inserts value at the position specified
+   * 
+   * .Remove(value)
+   *	-removes the first occurence of value
+   *
+   * .RemoveAt(indexPosition)
+   *	-removes the element at the specified index
+   *
+   * .RemoveRange(indexPosition, numberOfItems)
+   *	-removes numberOfItems starting from indexPosition
+   *
+   * .Contains(value)
+   *	-returns true if value is in the list
+   *
+   * .IndexOf(value)
+   *	-gets the index of the first occurence of value
+   * 
+   * .Sort()
+   *	-sorts the list in ascending order
+   * 
+   * .Reverse()
+   *	-reverse the list
+   *
+   * .Count
+   *	-gets the number of elements
+   *
+   * .Capacity
+   *	-gets the current capacity
+   * 
+   * .EnsureCapacity(limitValue)
+   *	-ensures the list can hold at least limitValue elements
+   * 
+   * .Clear()
+   *	-empties the list
+   * 
+   * .CopyTo(destinationArray)
+   *	-copies the elements of a list to an array starting at a particular array index
+   * 
+   * 
+   * LINQ METHODS
+   *
    */
+
+
+double videoPauseTime = 3.55;
 
 
 

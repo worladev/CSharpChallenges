@@ -283,7 +283,6 @@ namespace FirstProject
 
 
 
-            double videoPauseTime = 3.55;
             Console.ReadKey();
         }
     }
