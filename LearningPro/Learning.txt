@@ -262,6 +262,17 @@
    */
 
 
+/*
+* DICTIONARY
+*
+*
+*
+*
+*
+*
+*
+*
+*/
 double videoPauseTime = 3.55;
 
 
